@@ -1,0 +1,45 @@
+#! /usr/local/iverilog/bin/vvp
+:ivl_version "11.0 (devel)" "(s20150603-642-g3bdb50da)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "vhdl_textio";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+:vpi_module "v2009";
+S_0000000000842490 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000000000842620 .scope module, "fadder" "fadder" 3 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "ci";
+    .port_info 3 /OUTPUT 1 "s";
+    .port_info 4 /OUTPUT 1 "co";
+o0000000000863dc8 .functor BUFZ 1, C4<z>; HiZ drive
+o0000000000863df8 .functor BUFZ 1, C4<z>; HiZ drive
+L_00000000001aa740 .functor XOR 1, o0000000000863dc8, o0000000000863df8, C4<0>, C4<0>;
+o0000000000863e28 .functor BUFZ 1, C4<z>; HiZ drive
+L_00000000008bc7b0 .functor XOR 1, L_00000000001aa740, o0000000000863e28, C4<0>, C4<0>;
+L_00000000008bc820 .functor AND 1, o0000000000863dc8, o0000000000863df8, C4<1>, C4<1>;
+L_00000000008bc890 .functor AND 1, o0000000000863dc8, o0000000000863e28, C4<1>, C4<1>;
+L_00000000008bc900 .functor OR 1, L_00000000008bc820, L_00000000008bc890, C4<0>, C4<0>;
+L_00000000008bc970 .functor AND 1, o0000000000863df8, o0000000000863e28, C4<1>, C4<1>;
+L_00000000008bc9e0 .functor OR 1, L_00000000008bc900, L_00000000008bc970, C4<0>, C4<0>;
+v00000000008427b0_0 .net *"_s0", 0 0, L_00000000001aa740;  1 drivers
+v00000000001aa6a0_0 .net *"_s10", 0 0, L_00000000008bc970;  1 drivers
+v00000000001ac500_0 .net *"_s4", 0 0, L_00000000008bc820;  1 drivers
+v00000000001ac5a0_0 .net *"_s6", 0 0, L_00000000008bc890;  1 drivers
+v00000000001ac640_0 .net *"_s8", 0 0, L_00000000008bc900;  1 drivers
+v00000000001ac6e0_0 .net "a", 0 0, o0000000000863dc8;  0 drivers
+v00000000008bb5d0_0 .net "b", 0 0, o0000000000863df8;  0 drivers
+v00000000008bb670_0 .net "ci", 0 0, o0000000000863e28;  0 drivers
+v00000000008bc020_0 .net "co", 0 0, L_00000000008bc9e0;  1 drivers
+v00000000008bc5c0_0 .net "s", 0 0, L_00000000008bc7b0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "fadder.v";
