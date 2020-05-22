@@ -7,8 +7,8 @@ logic o;
     end
 
 initial begin
-    $dumpfile("dainariequal.vcd")
-    $dumpvars(0, test)
+    $dumpfile("dainariequal.vcd");
+    $dumpvars(0, test);
     a = 3'd7;
     b = 3'd3;
 #10

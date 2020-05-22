@@ -7,8 +7,8 @@ logic o;
     end
 
 initial begin
-    $dumpfile("dainari.vcd")
-    $dumpvars(0, test)
+    $dumpfile("dainari.vcd");
+    $dumpvars(0, test);
     a = 3'd7;
     b = 3'd3;
 #10
