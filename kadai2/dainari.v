@@ -5,7 +5,6 @@ logic o;
 
         else o = 1'b0;
     end
-endmodule
 
 initial begin
     $dumpfile("dainariequal.vcd")
