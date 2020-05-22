@@ -1,17 +1,17 @@
 module test;
 logic [3:0] a, b, s;
-radder ra(a, b, s, co);
+substructer sb(a, b, s, co);
 initial begin
-    $dumpfile("radder.vcd");
+    $dumpfile("substructer.vcd");
     $dumpvars(0, test);
-    a = 5;
-    b = 6;
+    a = 8;
+    b = 4;
     #10
-    a = 11;
-    b = 13 ;
+    a = 13;
+    b = 11 ;
     #10
-    a = 5;
-    b = 4'b1110;
+    a = 9;
+    b = 4;
     #10
     $finish;
 end
