@@ -1,4 +1,5 @@
 module dainari(input [2:0] a, b, output o);
+
 logic o;
     always_comb begin
         if( a>b ) begin
@@ -8,6 +9,4 @@ logic o;
              o = 1'b0;
         end
     end
-
-
 endmodule

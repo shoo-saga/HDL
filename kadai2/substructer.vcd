@@ -1,5 +1,5 @@
 $date
-	Thu May 14 19:06:23 2020
+	Sat May 23 01:44:43 2020
 $end
 $version
 	Icarus Verilog
@@ -87,6 +87,30 @@ $var wire 1 U b $end
 $var wire 1 V ci $end
 $var wire 1 " co $end
 $var wire 1 W s $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module test $end
+$scope module sb $end
+$scope module f0 $end
+$scope module f0 $end
+$upscope $end
+$scope module f1 $end
+$upscope $end
+$scope module f2 $end
+$upscope $end
+$scope module f3 $end
+$upscope $end
+$upscope $end
+$scope module fo $end
+$scope module f0 $end
+$upscope $end
+$scope module f1 $end
+$upscope $end
+$scope module f2 $end
+$upscope $end
+$scope module f3 $end
 $upscope $end
 $upscope $end
 $upscope $end
