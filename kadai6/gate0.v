@@ -3,31 +3,132 @@
 (* top =  1  *)
 (* src = "vm.v:1" *)
 module vm(a, b, clk, rst, change);
-  (* src = "vm.v:15" *)
-  wire [2:0] _00_;
-  wire _01_;
-  wire _02_;
-  (* src = "vm.v:15" *)
-  wire _03_;
+  wire _000_;
+  wire _001_;
+  wire _002_;
+  wire _003_;
+  wire _004_;
+  wire _005_;
+  wire _006_;
+  wire _007_;
+  wire _008_;
+  wire _009_;
+  wire _010_;
+  wire _011_;
+  wire _012_;
+  wire _013_;
+  wire _014_;
+  wire _015_;
+  wire _016_;
+  wire _017_;
+  wire _018_;
+  wire _019_;
+  wire _020_;
+  wire _021_;
+  wire _022_;
+  wire _023_;
+  wire _024_;
+  wire _025_;
+  wire _026_;
+  wire _027_;
+  wire _028_;
+  wire _029_;
+  wire _030_;
+  wire _031_;
+  wire _032_;
+  wire _033_;
+  wire _034_;
+  wire _035_;
+  wire _036_;
   (* src = "vm.v:1" *)
-  wire _04_;
-  wire _05_;
-  wire _06_;
-  wire _07_;
-  wire _08_;
-  wire _09_;
+  wire _037_;
+  wire _038_;
+  wire _039_;
+  wire _040_;
+  wire _041_;
+  wire _042_;
+  wire _043_;
+  wire _044_;
+  wire _045_;
+  wire _046_;
   (* src = "vm.v:1" *)
-  wire _10_;
-  wire _11_;
-  wire _12_;
+  wire _047_;
   (* src = "vm.v:1" *)
-  wire _13_;
+  wire _048_;
+  (* src = "vm.v:1" *)
+  wire _049_;
+  (* src = "vm.v:1" *)
+  wire _050_;
+  (* src = "vm.v:3" *)
+  wire _051_;
+  (* src = "vm.v:3" *)
+  wire _052_;
+  (* src = "vm.v:3" *)
+  wire _053_;
+  wire _054_;
+  wire _055_;
+  wire _056_;
+  wire _057_;
+  wire _058_;
+  wire _059_;
+  wire _060_;
+  wire _061_;
+  wire _062_;
+  wire _063_;
+  wire _064_;
+  wire _065_;
+  wire _066_;
+  wire _067_;
+  wire _068_;
+  wire _069_;
+  wire _070_;
+  wire _071_;
+  wire _072_;
+  wire _073_;
+  wire _074_;
+  wire _075_;
+  wire _076_;
+  wire _077_;
+  wire _078_;
+  wire _079_;
+  wire _080_;
+  wire _081_;
+  wire _082_;
   (* src = "vm.v:2" *)
-  wire _14_;
-  wire _15_;
-  wire _16_;
-  wire _17_;
-  wire _18_;
+  wire _083_;
+  (* src = "vm.v:2" *)
+  wire _084_;
+  (* src = "vm.v:2" *)
+  wire _085_;
+  (* src = "vm.v:2" *)
+  wire _086_;
+  (* src = "vm.v:2" *)
+  wire _087_;
+  (* src = "vm.v:2" *)
+  wire _088_;
+  (* src = "vm.v:1" *)
+  wire _089_;
+  (* src = "vm.v:2" *)
+  wire _090_;
+  (* src = "vm.v:2" *)
+  wire _091_;
+  (* src = "vm.v:2" *)
+  wire _092_;
+  (* src = "vm.v:2" *)
+  wire _093_;
+  (* src = "vm.v:2" *)
+  wire _094_;
+  (* src = "vm.v:2" *)
+  wire _095_;
+  wire _096_;
+  wire _097_;
+  wire _098_;
+  wire _099_;
+  wire _100_;
+  wire _101_;
+  wire _102_;
+  wire _103_;
+  wire _104_;
   (* src = "vm.v:1" *)
   input a;
   (* src = "vm.v:1" *)
@@ -41,92 +142,352 @@ module vm(a, b, clk, rst, change);
   wire [1:0] cnt;
   (* src = "vm.v:3" *)
   wire [2:0] nchange;
+  (* src = "vm.v:2" *)
+  wire [5:0] nstate;
   (* src = "vm.v:1" *)
   input rst;
   (* src = "vm.v:2" *)
-  (* unused_bits = "0" *)
   wire [5:0] state;
-  INVX1 _19_ (
-    .A(_13_),
-    .Y(_09_)
+  INVX1 _105_ (
+    .A(_089_),
+    .Y(_046_)
   );
-  INVX1 _20_ (
-    .A(_10_),
-    .Y(_11_)
+  INVX1 _106_ (
+    .A(_091_),
+    .Y(_054_)
   );
-  INVX1 _21_ (
-    .A(_14_),
-    .Y(_12_)
+  INVX1 _107_ (
+    .A(_094_),
+    .Y(_055_)
   );
-  OAI21X1 _22_ (
-    .A(_11_),
-    .B(_04_),
-    .C(_14_),
-    .Y(_05_)
+  INVX1 _108_ (
+    .A(_095_),
+    .Y(_056_)
   );
-  NOR2X1 _23_ (
-    .A(_04_),
-    .B(_12_),
-    .Y(_03_)
+  INVX1 _109_ (
+    .A(_037_),
+    .Y(_057_)
   );
-  INVX1 _24_ (
-    .A(_13_),
-    .Y(_06_)
+  INVX1 _110_ (
+    .A(_049_),
+    .Y(_058_)
   );
-  INVX1 _25_ (
-    .A(_13_),
-    .Y(_08_)
+  INVX1 _111_ (
+    .A(_050_),
+    .Y(_059_)
+  );
+  NOR2X1 _112_ (
+    .A(_037_),
+    .B(_047_),
+    .Y(_060_)
+  );
+  OR2X1 _113_ (
+    .A(_037_),
+    .B(_047_),
+    .Y(_061_)
+  );
+  NOR2X1 _114_ (
+    .A(_092_),
+    .B(_093_),
+    .Y(_062_)
+  );
+  OR2X1 _115_ (
+    .A(_092_),
+    .B(_093_),
+    .Y(_063_)
+  );
+  OR2X1 _116_ (
+    .A(_094_),
+    .B(_095_),
+    .Y(_064_)
+  );
+  NOR2X1 _117_ (
+    .A(_063_),
+    .B(_064_),
+    .Y(_065_)
+  );
+  NAND2X1 _118_ (
+    .A(_054_),
+    .B(_065_),
+    .Y(_066_)
+  );
+  OAI21X1 _119_ (
+    .A(_061_),
+    .B(_066_),
+    .C(_056_),
+    .Y(_083_)
+  );
+  AOI22X1 _120_ (
+    .A(_054_),
+    .B(_057_),
+    .C(_061_),
+    .D(_066_),
+    .Y(_084_)
+  );
+  AOI22X1 _121_ (
+    .A(_091_),
+    .B(_037_),
+    .C(_060_),
+    .D(_092_),
+    .Y(_067_)
+  );
+  INVX1 _122_ (
+    .A(_067_),
+    .Y(_085_)
+  );
+  AOI22X1 _123_ (
+    .A(_092_),
+    .B(_037_),
+    .C(_060_),
+    .D(_093_),
+    .Y(_068_)
+  );
+  INVX1 _124_ (
+    .A(_068_),
+    .Y(_086_)
+  );
+  NOR2X1 _125_ (
+    .A(_055_),
+    .B(_037_),
+    .Y(_069_)
+  );
+  AOI22X1 _126_ (
+    .A(_093_),
+    .B(_037_),
+    .C(_060_),
+    .D(_094_),
+    .Y(_070_)
+  );
+  INVX1 _127_ (
+    .A(_070_),
+    .Y(_087_)
+  );
+  AND2X1 _128_ (
+    .A(_057_),
+    .B(_047_),
+    .Y(_071_)
+  );
+  NAND2X1 _129_ (
+    .A(_057_),
+    .B(_047_),
+    .Y(_072_)
+  );
+  OAI21X1 _130_ (
+    .A(_063_),
+    .B(_064_),
+    .C(_054_),
+    .Y(_073_)
+  );
+  OAI21X1 _131_ (
+    .A(_063_),
+    .B(_073_),
+    .C(_071_),
+    .Y(_074_)
+  );
+  OAI21X1 _132_ (
+    .A(_055_),
+    .B(_060_),
+    .C(_074_),
+    .Y(_088_)
+  );
+  NOR2X1 _133_ (
+    .A(_048_),
+    .B(_071_),
+    .Y(_075_)
+  );
+  OAI21X1 _134_ (
+    .A(_092_),
+    .B(_069_),
+    .C(_072_),
+    .Y(_076_)
+  );
+  NOR3X1 _135_ (
+    .A(_090_),
+    .B(_063_),
+    .C(_064_),
+    .Y(_077_)
+  );
+  NOR2X1 _136_ (
+    .A(_093_),
+    .B(_077_),
+    .Y(_078_)
+  );
+  AOI21X1 _137_ (
+    .A(_076_),
+    .B(_078_),
+    .C(_075_),
+    .Y(_051_)
+  );
+  OAI21X1 _138_ (
+    .A(_055_),
+    .B(_061_),
+    .C(_062_),
+    .Y(_079_)
+  );
+  AOI21X1 _139_ (
+    .A(_072_),
+    .B(_077_),
+    .C(_079_),
+    .Y(_080_)
+  );
+  OAI22X1 _140_ (
+    .A(_062_),
+    .B(_072_),
+    .C(_080_),
+    .D(_058_),
+    .Y(_052_)
+  );
+  OAI21X1 _141_ (
+    .A(_047_),
+    .B(_050_),
+    .C(_069_),
+    .Y(_081_)
+  );
+  OAI21X1 _142_ (
+    .A(_063_),
+    .B(_077_),
+    .C(_072_),
+    .Y(_082_)
+  );
+  OAI21X1 _143_ (
+    .A(_059_),
+    .B(_082_),
+    .C(_081_),
+    .Y(_053_)
+  );
+  INVX1 _144_ (
+    .A(_089_),
+    .Y(_038_)
+  );
+  INVX1 _145_ (
+    .A(_089_),
+    .Y(_039_)
+  );
+  INVX1 _146_ (
+    .A(_089_),
+    .Y(_040_)
+  );
+  INVX1 _147_ (
+    .A(_089_),
+    .Y(_041_)
+  );
+  INVX1 _148_ (
+    .A(_089_),
+    .Y(_042_)
+  );
+  INVX1 _149_ (
+    .A(_089_),
+    .Y(_043_)
+  );
+  INVX1 _150_ (
+    .A(_089_),
+    .Y(_044_)
+  );
+  INVX1 _151_ (
+    .A(_089_),
+    .Y(_045_)
   );
   (* src = "vm.v:6" *)
-  DFFSR _26_ (
+  DFFSR _152_ (
     .CLK(clk),
-    .D(1'h0),
-    .Q(state[2]),
-    .R(_15_),
-    .S(_16_)
+    .D(nchange[0]),
+    .Q(change[0]),
+    .R(_096_),
+    .S(1'h1)
   );
   (* src = "vm.v:6" *)
-  DFFSR _27_ (
+  DFFSR _153_ (
     .CLK(clk),
     .D(nchange[1]),
     .Q(change[1]),
-    .R(_17_),
+    .R(_097_),
     .S(1'h1)
   );
   (* src = "vm.v:6" *)
-  DFFSR _28_ (
+  DFFSR _154_ (
     .CLK(clk),
     .D(nchange[2]),
     .Q(change[2]),
-    .R(_18_),
+    .R(_098_),
     .S(1'h1)
   );
-  (* src = "vm.v:15" *)
-  \$_DLATCH_P_  _29_ (
-    .D(state[2]),
-    .E(_01_),
-    .Q(nchange[1])
+  (* src = "vm.v:6" *)
+  DFFSR _155_ (
+    .CLK(clk),
+    .D(nstate[0]),
+    .Q(state[0]),
+    .R(_099_),
+    .S(1'h1)
   );
-  (* src = "vm.v:15" *)
-  \$_DLATCH_P_  _30_ (
-    .D(_00_[2]),
-    .E(_01_),
-    .Q(nchange[2])
+  (* src = "vm.v:6" *)
+  DFFSR _156_ (
+    .CLK(clk),
+    .D(nstate[1]),
+    .Q(state[1]),
+    .R(_100_),
+    .S(1'h1)
   );
-  assign _00_[1:0] = { state[2], state[2] };
-  assign change[0] = change[1];
+  (* src = "vm.v:6" *)
+  DFFSR _157_ (
+    .CLK(clk),
+    .D(nstate[2]),
+    .Q(state[2]),
+    .R(_101_),
+    .S(1'h1)
+  );
+  (* src = "vm.v:6" *)
+  DFFSR _158_ (
+    .CLK(clk),
+    .D(nstate[3]),
+    .Q(state[3]),
+    .R(_102_),
+    .S(1'h1)
+  );
+  (* src = "vm.v:6" *)
+  DFFSR _159_ (
+    .CLK(clk),
+    .D(nstate[4]),
+    .Q(state[4]),
+    .R(_103_),
+    .S(1'h1)
+  );
+  (* src = "vm.v:6" *)
+  DFFSR _160_ (
+    .CLK(clk),
+    .D(nstate[5]),
+    .Q(state[5]),
+    .R(1'h1),
+    .S(_104_)
+  );
   assign cnt[1] = a;
-  assign nchange[0] = nchange[1];
-  assign { state[5:3], state[1] } = { state[2], state[2], state[2], state[2] };
-  assign _07_ = 1'h1;
-  assign _13_ = rst;
-  assign _18_ = _09_;
-  assign _15_ = _06_;
-  assign _10_ = b;
-  assign _04_ = a;
-  assign _14_ = state[2];
-  assign _01_ = _05_;
-  assign _00_[2] = _03_;
-  assign _16_ = _07_;
-  assign _17_ = _08_;
+  assign _089_ = rst;
+  assign _104_ = _046_;
+  assign _091_ = state[1];
+  assign _094_ = state[4];
+  assign _095_ = state[5];
+  assign _092_ = state[2];
+  assign _093_ = state[3];
+  assign nstate[0] = _083_;
+  assign _037_ = a;
+  assign _047_ = b;
+  assign nstate[1] = _084_;
+  assign nstate[2] = _085_;
+  assign nstate[3] = _086_;
+  assign nstate[4] = _087_;
+  assign nstate[5] = _088_;
+  assign _048_ = change[0];
+  assign _090_ = state[0];
+  assign nchange[0] = _051_;
+  assign _049_ = change[1];
+  assign nchange[1] = _052_;
+  assign _050_ = change[2];
+  assign nchange[2] = _053_;
+  assign _096_ = _038_;
+  assign _097_ = _039_;
+  assign _098_ = _040_;
+  assign _099_ = _041_;
+  assign _100_ = _042_;
+  assign _101_ = _043_;
+  assign _102_ = _044_;
+  assign _103_ = _045_;
 endmodule
