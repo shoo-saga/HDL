@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
 
 module test;
-logic a,b,clk,rst, out;
+logic a,b,clk,rst;
 logic [2:0] change;
-vm vend(a, b, clk, rst,change,out);
+vm vm(a, b, clk, rst,change);
 initial begin
     $dumpfile("vm.vcd");
     $dumpvars(0, test);
