@@ -1,9 +1,11 @@
 `timescale 1ns / 1ps
 
 module test;
-logic a,b,clk,rst;
-logic [2:0] change;
-vm vm(a, b, clk, rst,change);
+reg  a,b,clk,rst;
+wire [2:0] change;
+wire out;
+vm vm(a, b, clk, rst, change, out);
+
 initial begin
     $dumpfile("vm.vcd");
     $dumpvars(0, test);

@@ -2,7 +2,7 @@
 
 (* top =  1  *)
 (* src = "vm.v:1" *)
-module vm(a, b, clk, rst, change);
+module vm(a, b, clk, rst, change, out);
   wire _00_;
   wire _01_;
   wire _02_;
@@ -26,139 +26,89 @@ module vm(a, b, clk, rst, change);
   wire _20_;
   wire _21_;
   wire _22_;
-  wire _23_;
-  wire _24_;
-  wire _25_;
-  wire _26_;
-  wire _27_;
-  wire _28_;
-  wire _29_;
-  wire _30_;
-  wire _31_;
-  wire _32_;
-  wire _33_;
-  wire _34_;
-  wire _35_;
-  wire _36_;
   (* src = "vm.v:1" *)
   input a;
   (* src = "vm.v:1" *)
   input b;
   (* src = "vm.v:1" *)
   output [2:0] change;
-  reg [2:0] change;
   (* src = "vm.v:1" *)
   input clk;
-  (* src = "vm.v:4" *)
-  (* unused_bits = "0" *)
-  wire [1:0] cnt;
-  (* src = "vm.v:3" *)
-  wire [2:0] nchange;
   (* src = "vm.v:2" *)
   wire [5:0] nstate;
+  (* src = "vm.v:1" *)
+  output out;
   (* src = "vm.v:1" *)
   input rst;
   (* src = "vm.v:2" *)
   reg [5:0] state;
-  assign _00_ = ~(b | a);
-  assign _01_ = ~state[1];
-  assign _02_ = state[4] | state[5];
-  assign _03_ = ~(state[2] | state[3]);
-  assign _04_ = _03_ & ~(_02_);
-  assign _05_ = ~(_04_ & _01_);
-  assign nstate[0] = _05_ ? state[5] : _00_;
-  assign _06_ = ~a;
-  assign _07_ = b & ~(a);
-  assign _08_ = ~(_07_ | _06_);
-  assign _09_ = _00_ & ~(_01_);
-  assign nstate[1] = _05_ ? _09_ : _08_;
-  assign _10_ = ~((_00_ & state[2]) | (state[1] & _08_));
-  assign nstate[2] = _05_ & ~(_10_);
-  assign _11_ = ~((_00_ & state[3]) | (state[2] & _08_));
-  assign nstate[3] = _05_ & ~(_11_);
-  assign _12_ = ~((_00_ & state[4]) | (state[3] & _08_));
-  assign nstate[4] = _05_ & ~(_12_);
-  assign _13_ = ~state[4];
-  assign _14_ = ~(_00_ | _13_);
-  assign _15_ = ~((state[2] | state[3]) & _07_);
-  assign _16_ = _15_ & ~(_14_);
-  assign _17_ = _07_ & ~(_01_);
-  assign _18_ = _17_ | ~(_16_);
-  assign nstate[5] = _05_ ? _18_ : _07_;
-  assign _19_ = ~change[0];
-  assign _20_ = _07_ | ~(_19_);
-  assign _21_ = state[0] | state[5];
-  assign _22_ = _21_ | ~(_13_);
-  assign _23_ = _22_ | ~(_03_);
-  assign _24_ = b | a;
-  assign _25_ = _24_ | ~(change[0]);
-  assign _26_ = ~(_07_ | _19_);
-  assign _27_ = ~((_26_ & state[2]) | (state[3] & _20_));
-  assign _28_ = ~((_25_ | _13_) & _27_);
-  assign nchange[0] = _23_ ? _28_ : _20_;
-  assign _29_ = change[1] & ~(_07_);
-  assign _30_ = _24_ | ~(change[1]);
-  assign _31_ = ~((change[1] | _07_) & (state[2] | state[3]));
-  assign _32_ = ~((_30_ | _13_) & _31_);
-  assign nchange[1] = _23_ ? _32_ : _29_;
-  assign _33_ = change[2] & ~(_07_);
-  assign _34_ = ~((b | change[2]) & _06_);
-  assign _35_ = ~((state[2] | state[3]) & _33_);
-  assign _36_ = ~((_34_ | _13_) & _35_);
-  assign nchange[2] = _23_ ? _36_ : _33_;
-  (* src = "vm.v:6" *)
-  always @(posedge clk or posedge rst)
-    if (rst)
-      change[0] <= 0;
-    else
-      change[0] <= nchange[0];
-  (* src = "vm.v:6" *)
-  always @(posedge clk or posedge rst)
-    if (rst)
-      change[1] <= 0;
-    else
-      change[1] <= nchange[1];
-  (* src = "vm.v:6" *)
-  always @(posedge clk or posedge rst)
-    if (rst)
-      change[2] <= 0;
-    else
-      change[2] <= nchange[2];
-  (* src = "vm.v:6" *)
+  assign _00_ = a ^ b;
+  assign _01_ = b & ~(a);
+  assign _02_ = ~(_01_ | _00_);
+  assign _03_ = ~state[1];
+  assign _04_ = state[4] | state[5];
+  assign _05_ = state[2] | state[3];
+  assign _06_ = ~(_05_ | _04_);
+  assign _07_ = ~(_06_ & _03_);
+  assign nstate[0] = _07_ ? state[5] : _02_;
+  assign _08_ = a & ~(b);
+  assign _09_ = _02_ & ~(_03_);
+  assign nstate[1] = _07_ ? _09_ : _08_;
+  assign _10_ = ~((_02_ & state[2]) | (state[1] & _08_));
+  assign nstate[2] = _07_ & ~(_10_);
+  assign _11_ = ~((_02_ & state[3]) | (state[2] & _08_));
+  assign nstate[3] = _07_ & ~(_11_);
+  assign _12_ = state[4] & ~(_00_);
+  assign _13_ = ~((_08_ & state[3]) | _12_);
+  assign nstate[4] = _07_ & ~(_13_);
+  assign _14_ = a | ~(b);
+  assign _15_ = ~state[3];
+  assign _16_ = ~state[2];
+  assign change[1] = ~((_16_ & _15_) | _14_);
+  assign _17_ = ~((_00_ & state[4]) | change[1]);
+  assign _18_ = ~((_14_ | _03_) & _17_);
+  assign nstate[5] = _07_ ? _18_ : _01_;
+  assign _19_ = state[0] | state[5];
+  assign _20_ = ~(_19_ | state[4]);
+  assign _21_ = _05_ | ~(_20_);
+  assign change[0] = ~((_21_ & _15_) | _14_);
+  assign _22_ = _14_ | ~(state[4]);
+  assign change[2] = _21_ & ~(_22_);
+  (* src = "vm.v:4" *)
   always @(posedge clk or posedge rst)
     if (rst)
       state[0] <= 0;
     else
       state[0] <= nstate[0];
-  (* src = "vm.v:6" *)
+  (* src = "vm.v:4" *)
   always @(posedge clk or posedge rst)
     if (rst)
       state[1] <= 0;
     else
       state[1] <= nstate[1];
-  (* src = "vm.v:6" *)
+  (* src = "vm.v:4" *)
   always @(posedge clk or posedge rst)
     if (rst)
       state[2] <= 0;
     else
       state[2] <= nstate[2];
-  (* src = "vm.v:6" *)
+  (* src = "vm.v:4" *)
   always @(posedge clk or posedge rst)
     if (rst)
       state[3] <= 0;
     else
       state[3] <= nstate[3];
-  (* src = "vm.v:6" *)
+  (* src = "vm.v:4" *)
   always @(posedge clk or posedge rst)
     if (rst)
       state[4] <= 0;
     else
       state[4] <= nstate[4];
-  (* src = "vm.v:6" *)
+  (* src = "vm.v:4" *)
   always @(posedge clk or posedge rst)
     if (rst)
       state[5] <= 1;
     else
       state[5] <= nstate[5];
-  assign cnt[1] = a;
+  assign out = state[5];
 endmodule
