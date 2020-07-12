@@ -1,6 +1,6 @@
 `include "pu.vh"
 module lidx(input [`WIDTH:0] i, input [`HALFWIDTH:0] iv, input [`LIDXS:0] op, output logic [`WIDTH:0] o);
-	`LIDXENUM
+	parameter THU =2'b00, IMM =2'b01, LIL =2'b10 ,LIH =2'b11;
 	always @*
 		casex(op)
 		// synopsys full_case parallel_case

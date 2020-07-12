@@ -21,7 +21,5 @@
 
 `define LIDXS 1 // 1:0 00,01 do nothing / 10 LIL / 11 LIH
 
-`define LIDXENUM typedef enum {THU, IMM, LIL, LIH} LIDEXNUM;
-
 `define DMS 255  // 255:0 data memory size
 `define DMSB 7 // 7:0 data memory addr size

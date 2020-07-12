@@ -2,7 +2,8 @@
 
 module alu(input [`WIDTH:0] a, b, input [`OPS:0] op, output logic [`WIDTH:0] r,
 		input dstb, output logic ze, ca, sg, input clk, rst);
-	enum {ADD, SUB, THB, ASR, RSR, RSL, NAD, XOR} OPETYP;
+	parameter ADD = 3'b000, SUB = 3'b001, THB = 3'b010, ASR = 3'b011;
+	parameter RSR = 3'b100, RSL = 3'b101, NAD = 3'b110, XOR = 3'b111;
 	logic [`WIDTH+1:0] rr;
 	always @* begin
 		case(op)
