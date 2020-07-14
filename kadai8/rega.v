@@ -1,8 +1,7 @@
-`include "pu.vh"
-module rega(input logic [`RASB:0] arad, brad, output logic [`WIDTH:0] a, b,
-	input we, input logic [`RASB:0] wad, input [`WIDTH:0] wd,
+module rega(input logic [1:0] arad, brad, output logic [15:0] a, b,
+	input we, input logic [1:0] wad, input [15:0] wd,
 	input clk, rst);
-	logic [`WIDTH:0] regar [`RAS:0];
+	logic [15:0] regar [3:0];
 	always @(posedge clk or posedge rst) begin
 		if(rst) begin
 			regar[0] <= 0;

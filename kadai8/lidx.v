@@ -1,5 +1,5 @@
 `include "pu.vh"
-module lidx(input [`WIDTH:0] i, input [`HALFWIDTH:0] iv, input [`LIDXS:0] op, output logic [`WIDTH:0] o);
+module lidx(input [15:0] i, input [7:0] iv, input [1:0] op, output logic [15:0] o);
 	parameter THU =2'b00, IMM =2'b01, LIL =2'b10 ,LIH =2'b11;
 	always @*
 		casex(op)
@@ -7,10 +7,10 @@ module lidx(input [`WIDTH:0] i, input [`HALFWIDTH:0] iv, input [`LIDXS:0] op, ou
 		THU:
 			o = i;
 		IMM:
-			o = {{8{iv[`HALFWIDTH]}},iv[`HALFWIDTH:0]};
+			o = {{8{iv[7]}},iv[7:0]};
 		LIL:
-			o = {i[`WIDTH:`HALFWIDTH+1],iv};
+			o = {i[15:7+1],iv};
 		LIH:
-			o = {iv,i[`HALFWIDTH:0]};
+			o = {iv,i[7:0]};
 		endcase
 endmodule
