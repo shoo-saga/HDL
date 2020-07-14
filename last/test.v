@@ -29,3 +29,5 @@ initial begin
     #2
     d  = 4'b1111;
     i2 = 9'd15;
+end
+endmodule
