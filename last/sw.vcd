@@ -1,0 +1,63 @@
+$date
+	Sat Jul 18 21:13:54 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test $end
+$var wire 1 ! we $end
+$var reg 10 " pkti [9:0] $end
+$scope module mkwe $end
+$var wire 10 # pkti [9:0] $end
+$var reg 1 ! we $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 #
+b0 "
+0!
+$end
+#10
+1!
+b1000000000 "
+b1000000000 #
+#20
+1!
+b100000000 "
+b100000000 #
+#30
+1!
+b100000001 "
+b100000001 #
+#40
+0!
+b1100000010 "
+b1100000010 #
+#140
+b0 "
+b0 #
+#150
+1!
+b1010010001 "
+b1010010001 #
+#160
+1!
+b110010000 "
+b110010000 #
+#170
+1!
+b110010001 "
+b110010001 #
+#180
+0!
+b1110010010 "
+b1110010010 #
+#280
+b0 "
+b0 #
+#790

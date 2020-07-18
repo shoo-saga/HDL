@@ -1,0 +1,379 @@
+$date
+	Sat Jul 18 17:00:45 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module swtest $end
+$var wire 10 ! o3 [9:0] $end
+$var wire 10 " o2 [9:0] $end
+$var wire 10 # o1 [9:0] $end
+$var wire 10 $ o0 [9:0] $end
+$var reg 1 % clk $end
+$var reg 10 & i0 [9:0] $end
+$var reg 10 ' i1 [9:0] $end
+$var reg 10 ( i2 [9:0] $end
+$var reg 10 ) i3 [9:0] $end
+$var reg 1 * rst $end
+$scope module sw $end
+$var wire 1 % clk $end
+$var wire 10 + i0 [9:0] $end
+$var wire 10 , i1 [9:0] $end
+$var wire 10 - i2 [9:0] $end
+$var wire 10 . i3 [9:0] $end
+$var wire 1 * rst $end
+$var wire 4 / req3 [3:0] $end
+$var wire 4 0 req2 [3:0] $end
+$var wire 4 1 req1 [3:0] $end
+$var wire 4 2 req0 [3:0] $end
+$var wire 10 3 o3 [9:0] $end
+$var wire 10 4 o2 [9:0] $end
+$var wire 10 5 o1 [9:0] $end
+$var wire 10 6 o0 [9:0] $end
+$var wire 1 7 full3 $end
+$var wire 1 8 full2 $end
+$var wire 1 9 full1 $end
+$var wire 1 : full0 $end
+$var wire 10 ; co3 [9:0] $end
+$var wire 10 < co2 [9:0] $end
+$var wire 10 = co1 [9:0] $end
+$var wire 10 > co0 [9:0] $end
+$var wire 1 ? ack33 $end
+$var wire 1 @ ack32 $end
+$var wire 1 A ack31 $end
+$var wire 1 B ack30 $end
+$var wire 1 C ack3 $end
+$var wire 1 D ack23 $end
+$var wire 1 E ack22 $end
+$var wire 1 F ack21 $end
+$var wire 1 G ack20 $end
+$var wire 1 H ack2 $end
+$var wire 1 I ack13 $end
+$var wire 1 J ack12 $end
+$var wire 1 K ack11 $end
+$var wire 1 L ack10 $end
+$var wire 1 M ack1 $end
+$var wire 1 N ack03 $end
+$var wire 1 O ack02 $end
+$var wire 1 P ack01 $end
+$var wire 1 Q ack00 $end
+$var wire 1 R ack0 $end
+$scope module ackor0 $end
+$var wire 1 R ack $end
+$var wire 1 B ack3 $end
+$var wire 1 G ack2 $end
+$var wire 1 L ack1 $end
+$var wire 1 Q ack0 $end
+$upscope $end
+$scope module ackor1 $end
+$var wire 1 M ack $end
+$var wire 1 A ack3 $end
+$var wire 1 F ack2 $end
+$var wire 1 K ack1 $end
+$var wire 1 P ack0 $end
+$upscope $end
+$scope module ackor2 $end
+$var wire 1 H ack $end
+$var wire 1 @ ack3 $end
+$var wire 1 E ack2 $end
+$var wire 1 J ack1 $end
+$var wire 1 O ack0 $end
+$upscope $end
+$scope module ackor3 $end
+$var wire 1 C ack $end
+$var wire 1 ? ack3 $end
+$var wire 1 D ack2 $end
+$var wire 1 I ack1 $end
+$var wire 1 N ack0 $end
+$upscope $end
+$scope module arb0 $end
+$var wire 1 % clk $end
+$var wire 1 S req0 $end
+$var wire 1 T req1 $end
+$var wire 1 U req2 $end
+$var wire 1 V req3 $end
+$var wire 1 * rst $end
+$var reg 1 Q ack0 $end
+$var reg 1 P ack1 $end
+$var reg 1 O ack2 $end
+$var reg 1 N ack3 $end
+$var reg 2 W nstate [1:0] $end
+$var reg 2 X state [1:0] $end
+$upscope $end
+$scope module arb1 $end
+$var wire 1 % clk $end
+$var wire 1 Y req0 $end
+$var wire 1 Z req1 $end
+$var wire 1 [ req2 $end
+$var wire 1 \ req3 $end
+$var wire 1 * rst $end
+$var reg 1 L ack0 $end
+$var reg 1 K ack1 $end
+$var reg 1 J ack2 $end
+$var reg 1 I ack3 $end
+$var reg 2 ] nstate [1:0] $end
+$var reg 2 ^ state [1:0] $end
+$upscope $end
+$scope module arb2 $end
+$var wire 1 % clk $end
+$var wire 1 _ req0 $end
+$var wire 1 ` req1 $end
+$var wire 1 a req2 $end
+$var wire 1 b req3 $end
+$var wire 1 * rst $end
+$var reg 1 G ack0 $end
+$var reg 1 F ack1 $end
+$var reg 1 E ack2 $end
+$var reg 1 D ack3 $end
+$var reg 2 c nstate [1:0] $end
+$var reg 2 d state [1:0] $end
+$upscope $end
+$scope module arb3 $end
+$var wire 1 % clk $end
+$var wire 1 e req0 $end
+$var wire 1 f req1 $end
+$var wire 1 g req2 $end
+$var wire 1 h req3 $end
+$var wire 1 * rst $end
+$var reg 1 B ack0 $end
+$var reg 1 A ack1 $end
+$var reg 1 @ ack2 $end
+$var reg 1 ? ack3 $end
+$var reg 2 i nstate [1:0] $end
+$var reg 2 j state [1:0] $end
+$upscope $end
+$scope module cb $end
+$var wire 4 k d0 [3:0] $end
+$var wire 4 l d1 [3:0] $end
+$var wire 4 m d2 [3:0] $end
+$var wire 4 n d3 [3:0] $end
+$var wire 10 o o3 [9:0] $end
+$var wire 10 p o2 [9:0] $end
+$var wire 10 q o1 [9:0] $end
+$var wire 10 r o0 [9:0] $end
+$var wire 10 s i3 [9:0] $end
+$var wire 10 t i2 [9:0] $end
+$var wire 10 u i1 [9:0] $end
+$var wire 10 v i0 [9:0] $end
+$scope module cbsel0 $end
+$var wire 4 w d [3:0] $end
+$var wire 10 x i3 [9:0] $end
+$var wire 10 y i2 [9:0] $end
+$var wire 10 z i1 [9:0] $end
+$var wire 10 { i0 [9:0] $end
+$var reg 10 | o [9:0] $end
+$upscope $end
+$scope module cbsel1 $end
+$var wire 4 } d [3:0] $end
+$var wire 10 ~ i3 [9:0] $end
+$var wire 10 !" i2 [9:0] $end
+$var wire 10 "" i1 [9:0] $end
+$var wire 10 #" i0 [9:0] $end
+$var reg 10 $" o [9:0] $end
+$upscope $end
+$scope module cbsel2 $end
+$var wire 4 %" d [3:0] $end
+$var wire 10 &" i3 [9:0] $end
+$var wire 10 '" i2 [9:0] $end
+$var wire 10 (" i1 [9:0] $end
+$var wire 10 )" i0 [9:0] $end
+$var reg 10 *" o [9:0] $end
+$upscope $end
+$scope module cbsel3 $end
+$var wire 4 +" d [3:0] $end
+$var wire 10 ," i3 [9:0] $end
+$var wire 10 -" i2 [9:0] $end
+$var wire 10 ." i1 [9:0] $end
+$var wire 10 /" i0 [9:0] $end
+$var reg 10 0" o [9:0] $end
+$upscope $end
+$upscope $end
+$scope module ib0 $end
+$var wire 1 R ack $end
+$var wire 1 % clk $end
+$var wire 10 1" pkti [9:0] $end
+$var wire 1 * rst $end
+$var wire 1 2" we $end
+$var wire 4 3" reqi [3:0] $end
+$var wire 4 4" req [3:0] $end
+$var wire 1 5" re $end
+$var wire 10 6" pkto [9:0] $end
+$var wire 1 : full $end
+$var wire 1 7" empty $end
+$scope module fifo $end
+$var wire 1 % clk $end
+$var wire 10 8" pkti [9:0] $end
+$var wire 1 * rst $end
+$var wire 1 2" we $end
+$var wire 1 5" re $end
+$var reg 1 7" empty $end
+$var reg 1 : full $end
+$var reg 4 9" head [3:0] $end
+$var reg 4 :" headi [3:0] $end
+$var reg 10 ;" pkto [9:0] $end
+$var reg 4 <" tail [3:0] $end
+$upscope $end
+$scope module isbm $end
+$var wire 1 R ack $end
+$var wire 1 % clk $end
+$var wire 1 7" empty $end
+$var wire 2 =" pkto [1:0] $end
+$var wire 1 * rst $end
+$var wire 4 >" reqi [3:0] $end
+$var reg 2 ?" nstate [1:0] $end
+$var reg 1 5" re $end
+$var reg 4 @" req [3:0] $end
+$var reg 2 A" state [1:0] $end
+$upscope $end
+$scope module mkreq $end
+$var wire 10 B" pkto [9:0] $end
+$var reg 4 C" reqi [3:0] $end
+$upscope $end
+$scope module mkwe $end
+$var wire 10 D" pkti [9:0] $end
+$var reg 1 2" we $end
+$upscope $end
+$upscope $end
+$scope module ib1 $end
+$var wire 1 M ack $end
+$var wire 1 % clk $end
+$var wire 10 E" pkti [9:0] $end
+$var wire 1 * rst $end
+$var wire 1 F" we $end
+$var wire 4 G" reqi [3:0] $end
+$var wire 4 H" req [3:0] $end
+$var wire 1 I" re $end
+$var wire 10 J" pkto [9:0] $end
+$var wire 1 9 full $end
+$var wire 1 K" empty $end
+$scope module fifo $end
+$var wire 1 % clk $end
+$var wire 10 L" pkti [9:0] $end
+$var wire 1 * rst $end
+$var wire 1 F" we $end
+$var wire 1 I" re $end
+$var reg 1 K" empty $end
+$var reg 1 9 full $end
+$var reg 4 M" head [3:0] $end
+$var reg 4 N" headi [3:0] $end
+$var reg 10 O" pkto [9:0] $end
+$var reg 4 P" tail [3:0] $end
+$upscope $end
+$scope module isbm $end
+$var wire 1 M ack $end
+$var wire 1 % clk $end
+$var wire 1 K" empty $end
+$var wire 2 Q" pkto [1:0] $end
+$var wire 1 * rst $end
+$var wire 4 R" reqi [3:0] $end
+$var reg 2 S" nstate [1:0] $end
+$var reg 1 I" re $end
+$var reg 4 T" req [3:0] $end
+$var reg 2 U" state [1:0] $end
+$upscope $end
+$scope module mkreq $end
+$var wire 10 V" pkto [9:0] $end
+$var reg 4 W" reqi [3:0] $end
+$upscope $end
+$scope module mkwe $end
+$var wire 10 X" pkti [9:0] $end
+$var reg 1 F" we $end
+$upscope $end
+$upscope $end
+$scope module ib2 $end
+$var wire 1 H ack $end
+$var wire 1 % clk $end
+$var wire 10 Y" pkti [9:0] $end
+$var wire 1 * rst $end
+$var wire 1 Z" we $end
+$var wire 4 [" reqi [3:0] $end
+$var wire 4 \" req [3:0] $end
+$var wire 1 ]" re $end
+$var wire 10 ^" pkto [9:0] $end
+$var wire 1 8 full $end
+$var wire 1 _" empty $end
+$scope module fifo $end
+$var wire 1 % clk $end
+$var wire 10 `" pkti [9:0] $end
+$var wire 1 * rst $end
+$var wire 1 Z" we $end
+$var wire 1 ]" re $end
+$var reg 1 _" empty $end
+$var reg 1 8 full $end
+$var reg 4 a" head [3:0] $end
+$var reg 4 b" headi [3:0] $end
+$var reg 10 c" pkto [9:0] $end
+$var reg 4 d" tail [3:0] $end
+$upscope $end
+$scope module isbm $end
+$var wire 1 H ack $end
+$var wire 1 % clk $end
+$var wire 1 _" empty $end
+$var wire 2 e" pkto [1:0] $end
+$var wire 1 * rst $end
+$var wire 4 f" reqi [3:0] $end
+$var reg 2 g" nstate [1:0] $end
+$var reg 1 ]" re $end
+$var reg 4 h" req [3:0] $end
+$var reg 2 i" state [1:0] $end
+$upscope $end
+$scope module mkreq $end
+$var wire 10 j" pkto [9:0] $end
+$var reg 4 k" reqi [3:0] $end
+$upscope $end
+$scope module mkwe $end
+$var wire 10 l" pkti [9:0] $end
+$var reg 1 Z" we $end
+$upscope $end
+$upscope $end
+$scope module ib3 $end
+$var wire 1 C ack $end
+$var wire 1 % clk $end
+$var wire 10 m" pkti [9:0] $end
+$var wire 1 * rst $end
+$var wire 1 n" we $end
+$var wire 4 o" reqi [3:0] $end
+$var wire 4 p" req [3:0] $end
+$var wire 1 q" re $end
+$var wire 10 r" pkto [9:0] $end
+$var wire 1 7 full $end
+$var wire 1 s" empty $end
+$scope module fifo $end
+$var wire 1 % clk $end
+$var wire 10 t" pkti [9:0] $end
+$var wire 1 * rst $end
+$var wire 1 n" we $end
+$var wire 1 q" re $end
+$var reg 1 s" empty $end
+$var reg 1 7 full $end
+$var reg 4 u" head [3:0] $end
+$var reg 4 v" headi [3:0] $end
+$var reg 10 w" pkto [9:0] $end
+$var reg 4 x" tail [3:0] $end
+$upscope $end
+$scope module isbm $end
+$var wire 1 C ack $end
+$var wire 1 % clk $end
+$var wire 1 s" empty $end
+$var wire 2 y" pkto [1:0] $end
+$var wire 1 * rst $end
+$var wire 4 z" reqi [3:0] $end
+$var reg 2 {" nstate [1:0] $end
+$var reg 1 q" re $end
+$var reg 4 |" req [3:0] $end
+$var reg 2 }" state [1:0] $end
+$upscope $end
+$scope module mkreq $end
+$var wire 10 ~" pkto [9:0] $end
+$var reg 4 !# reqi [3:0] $end
+$upscope $end
+$scope module mkwe $end
+$var wire 10 "# pkti [9:0] $end
+$var reg 1 n" we $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
