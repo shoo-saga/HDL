@@ -1,5 +1,5 @@
-module cbsel(input logic [9:0] i0, i1, i2, i3,
-output logic [9:0] o, input logic [3:0] d);
+module cbsel(input  [9:0] i0, i1, i2, i3,
+output logic [9:0] o, input  [3:0] d);
 
 always_comb begin
     o = 9'b0;

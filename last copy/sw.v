@@ -1,10 +1,10 @@
 module sw(input [9:0] i0, i1, i2, i3, output [9:0] o0, o1, o2, o3, input clk, rst);
 	logic [9:0] co0, co1, co2, co3;
 	logic [3:0] req0, req1, req2, req3;
-	ib ib0(i0, co0, req0, ack0, full0, clk, rst);
-	ib ib1(i1, co1, req1, ack1, full1, clk, rst);
-	ib ib2(i2, co2, req2, ack2, full2, clk, rst);
-	ib ib3(i3, co3, req3, ack3, full3, clk, rst);
+	ib ib0(i0, co0, req0, ack0,empty0, full0, clk, rst);
+	ib ib1(i1, co1, req1, ack1,empty1, full1, clk, rst);
+	ib ib2(i2, co2, req2, ack2,empty2, full2, clk, rst);
+	ib ib3(i3, co3, req3, ack3,empty3, full3, clk, rst);
 	ackor ackor0(ack00, ack10, ack20, ack30, ack0);
 	ackor ackor1(ack01, ack11, ack21, ack31, ack1);
 	ackor ackor2(ack02, ack12, ack22, ack32, ack2);

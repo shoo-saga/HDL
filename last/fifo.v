@@ -17,7 +17,7 @@ always_comb begin
     pkto = mem[tail];
     if(head == tail)begin
         empty = 1'b1;
-        pkto = 9'd0;
+        pkto = 0;
     end
     else empty = 1'b0;
     headi= head+1;
