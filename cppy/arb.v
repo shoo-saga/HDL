@@ -3,13 +3,6 @@ module arb(input req0,req1,req2,req3, output logic ack0,ack1,ack2,ack3, input cl
 logic [2:0] state;
 logic req;
 
-always_comb begin
-    req = 0;
-    if (req0||req1||req2||req3)
-    req = 0;
-    else
-    req = 1;
-end
 
 
 always@(posedge clk or posedge rst)begin
@@ -18,10 +11,14 @@ always@(posedge clk or posedge rst)begin
         ack1 <= 1'b0;
         ack2 <= 1'b0;
         ack3 <= 1'b0;
+        req <= 0;
         state <= 2'b00;
     end
+    else begin
+    if (req0||req1||req2||req3)
+    req = 0;
     else
-    begin
+    req = 1;
     case(state)
     2'b00:begin
     if (req0) ack0 = 1'b1;

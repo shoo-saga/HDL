@@ -108,7 +108,7 @@ i3 = 10'b10_0011_0011; // port3 => port3 short
 i3 = 10'b11_0011_1111;
 #10
 i3 = 0;
-#100
+#500
 i0 = 10'b10_0000_0001; // port0 => port1 length 4 conflict
 i1 = 10'b10_0001_0001; // port0 => port1 length 4 conflict
 i2 = 10'b10_0010_0001; // port0 => port1 length 4 conflict

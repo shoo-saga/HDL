@@ -1,39 +1,44 @@
 `include "sw.vh"
-module swtest;
+module cbtest;
 	logic [`PKTW:0] i0, i1, i2, i3;
 	logic [`PKTW:0] o0, o1, o2, o3;
-	logic clk, rst;
-	sw sw(i0, i1, i2, i3, o0, o1, o2, o3, clk, rst);
-	always #5 clk = ~clk;
+	logic [3:0] d0, d1, d2, d3;
+	cb cb(i0, i1, i2, i3, o0, o1, o2, o3, d0, d1, d2, d3);
 initial begin
-$dumpfile("sw.vcd");
-$dumpvars(0, swtest);
-clk = 0;
+$dumpfile("cb.vcd");
+$dumpvars(0, cbtest);
 i0 = 0;
 i1 = 0;
 i2 = 0;
 i3 = 0;
-rst = `ASSERT;
+d0 = 0;
+d1 = 0;
+d2 = 0;
+d3 = 0;
 #10
-rst = `NEGATE;
 #10
 i0 = 10'b10_0000_0000; // port0 => port0 length 4
+d0 = 4'b0001;
 #10
 i0 = 10'b01_0000_0000;
 #10
 i0 = 10'b01_0000_0001;
 #10
 i0 = 10'b11_0000_0010;
+d0 = 4'b0000;
 #10
 i0 = 0;
 #10
 i0 = 10'b10_1001_0001; // port0 => port1 length 4
+d1 = 4'b0001;
 #10
 i0 = 10'b01_1001_0000;
+
 #10
 i0 = 10'b01_1001_0001;
 #10
 i0 = 10'b11_1001_0010;
+d1 = 4'b0001;
 #10
 i0 = 0;
 #10
@@ -46,10 +51,13 @@ i0 = 10'b10_0000_0001; // port0 => port1 short
 i0 = 10'b11_0000_1111;
 #10
 i0 = 10'b10_0000_0010; // port0 => port2 short
+d2 = 4'b0001;
 #10
 i0 = 10'b11_0000_1111;
+d2 = 4'b0000;
 #10
 i0 = 10'b10_0000_0011; // port0 => port3 short
+d3 = 4'b0001;
 #10
 i0 = 10'b11_0000_1111;
 #10
@@ -108,7 +116,7 @@ i3 = 10'b10_0011_0011; // port3 => port3 short
 i3 = 10'b11_0011_1111;
 #10
 i3 = 0;
-#29
+#300
 i0 = 10'b10_0000_0001; // port0 => port1 length 4 conflict
 i1 = 10'b10_0001_0001; // port0 => port1 length 4 conflict
 i2 = 10'b10_0010_0001; // port0 => port1 length 4 conflict
@@ -133,7 +141,7 @@ i0 = 0;
 i1 = 0;
 i2 = 0;
 i3 = 0;
-#250
+#300
 i0 = 10'b10_0000_0000; // port0 => port0 short conflict
 i1 = 10'b10_0001_0000; // port0 => port0 short conflict
 i2 = 10'b10_0010_0000; // port0 => port0 short conflict
@@ -148,7 +156,7 @@ i0 = 0;
 i1 = 0;
 i2 = 0;
 i3 = 0;
-#250
+#300
 i0 = 10'b10_0000_0001; // port0 => port1 short conflict
 i1 = 10'b10_0001_0001; // port0 => port1 short conflict
 i2 = 10'b10_0010_0001; // port0 => port1 short conflict
@@ -163,7 +171,7 @@ i0 = 0;
 i1 = 0;
 i2 = 0;
 i3 = 0;
-#250
+#300
 i0 = 10'b10_0000_0010; // port0 => port2 short conflict
 i1 = 10'b10_0001_0010; // port0 => port2 short conflict
 i2 = 10'b10_0010_0010; // port0 => port2 short conflict
@@ -178,7 +186,7 @@ i0 = 0;
 i1 = 0;
 i2 = 0;
 i3 = 0;
-#250
+#300
 i0 = 10'b10_0000_0011; // port0 => port3 short conflict
 i1 = 10'b10_0001_0011; // port0 => port3 short conflict
 i2 = 10'b10_0010_0011; // port0 => port3 short conflict
@@ -193,7 +201,7 @@ i0 = 0;
 i1 = 0;
 i2 = 0;
 i3 = 0;
-#250
+#400
 $finish;
 end
 endmodule
