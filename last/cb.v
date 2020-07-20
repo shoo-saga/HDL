@@ -1,3 +1,5 @@
+// 82015037
+// shoo saga
 module cb(input [9:0] i0, i1, i2, i3, output [9:0] o0, o1, o2, o3,
 input [3:0] d0, d1, d2, d3);
 

@@ -1,3 +1,5 @@
+// 82015037
+// shoo saga
 module ibsm(input [9:0] pkto,output logic re,input empty,
 output logic [3:0] req, input ack,input clk,input rst);
 

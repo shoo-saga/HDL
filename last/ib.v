@@ -1,3 +1,5 @@
+// 82015037
+// shoo saga
 module ib(input [9:0] pkti, output [9:0] pkto, output [3:0] req, input ack,
 	output empty, full, input clk, rst);
 	mkwe mkwe(pkti, we);

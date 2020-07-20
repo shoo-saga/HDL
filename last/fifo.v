@@ -1,3 +1,5 @@
+// 82015037
+// shoo saga
 module fifo(input logic [9:0] pkti, input we,
 output logic full, output logic  [9:0]pkto, input re, output logic empty, input clk, rst);
 logic [9:0] mem[15:0];

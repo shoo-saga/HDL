@@ -1,3 +1,5 @@
+// 82015037
+// shoo saga
 module sw(input [9:0] i0, i1, i2, i3, output [9:0] o0, o1, o2, o3, input clk, rst);
 	logic [9:0] co0, co1, co2, co3;
 	logic [3:0] req0, req1, req2, req3;
